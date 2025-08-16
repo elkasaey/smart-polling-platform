@@ -1,0 +1,171 @@
+.create-poll {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.poll-form {
+  margin-top: 30px;
+}
+
+.questions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.question-builder {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  background: white;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.question-header h3 {
+  margin: 0;
+  color: #1976d2;
+}
+
+.btn-remove {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-remove:hover {
+  background: #c82333;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: end;
+}
+
+.conditional-logic {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.conditional-logic h4 {
+  margin-top: 0;
+  color: #495057;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.conditional-logic p {
+  margin-bottom: 15px;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.conditional-logic select,
+.conditional-logic input {
+  margin-right: 12px;
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.conditional-logic select {
+  min-width: 120px;
+}
+
+.conditional-logic input {
+  min-width: 150px;
+}
+
+.choices-section {
+  margin-top: 20px;
+}
+
+.choice-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.choice-input .form-control {
+  flex: 1;
+}
+
+.btn-remove-small {
+  background: #dc3545;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-remove-small:hover {
+  background: #c82333;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.form-actions .btn {
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .question-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .conditional-logic select,
+  .conditional-logic input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  
+  .choice-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn-remove-small {
+    align-self: center;
+  }
+}
