@@ -1,0 +1,4 @@
+/* Import all CSS files */
+@import './global.css';
+@import './components.css';
+@import './responsive.css';

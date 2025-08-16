@@ -1,11 +1,10 @@
 # 🚀 Quick Setup Guide
 
 ## Prerequisites
-- Python 3.8+
-- Node.js 16+
+- Docker and Docker Compose
 - Git
 
-## 🏃‍♂️ Quick Start (Windows)
+## 🏃‍♂️ Quick Start with Docker
 
 1. **Clone and navigate to project**
    ```bash
@@ -13,51 +12,85 @@
    cd smart-polling-platform
    ```
 
-2. **Run the startup script**
+2. **Start development environment**
    ```bash
-   start.bat
+   make dev
+   # or
+   docker-compose -f docker-compose.dev.yml up
    ```
 
 3. **Open your browser**
    - Frontend: http://localhost:3000
    - Backend API: http://localhost:8000
+   - Admin: http://localhost:8000/admin
 
-## 🏃‍♂️ Quick Start (Mac/Linux)
+## 🏃‍♂️ Production with Docker
 
-1. **Clone and navigate to project**
+1. **Start production environment**
    ```bash
-   git clone <your-repo-url>
-   cd smart-polling-platform
+   make prod
+   # or
+   docker-compose up -d
    ```
 
-2. **Make script executable and run**
-   ```bash
-   chmod +x start.sh
-   ./start.sh
-   ```
+2. **Access the application**
+   - Main App: http://localhost
+   - Admin: http://localhost/admin
 
-3. **Open your browser**
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:8000
+## 🔧 Docker Commands
 
-## 🔧 Manual Setup
-
-### Backend Setup
+### Development
 ```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
+# Start development environment
+make dev
+
+# Build development containers
+make dev-build
+
+# View development logs
+make dev-logs
+
+# Stop development environment
+make down
 ```
 
-### Frontend Setup
+### Production
 ```bash
-cd frontend
-npm install
-npm start
+# Start production environment
+make prod
+
+# Build production containers
+make prod-build
+
+# View production logs
+make prod-logs
+
+# Stop production environment
+make down
+```
+
+### Useful Commands
+```bash
+# View all logs
+make logs
+
+# Clean up containers and volumes
+make clean
+
+# Run tests
+make test
+
+# Check service health
+make health
+
+# Database operations
+make db-reset
+make db-shell
+
+# Backend operations
+make backend-shell
+make backend-migrate
+make backend-collectstatic
 ```
 
 ## 📱 First Steps

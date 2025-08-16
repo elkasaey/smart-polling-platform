@@ -50,64 +50,58 @@ The platform implements a sophisticated conditional logic system:
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.8+
-- Node.js 16+
-- npm or yarn
+- Docker and Docker Compose
+- Git
 
-### Backend Setup
+### Quick Start with Docker
 
-1. **Navigate to backend directory**
+1. **Clone the repository**
    ```bash
-   cd backend
+   git clone <your-repo-url>
+   cd smart-polling-platform
    ```
 
-2. **Create virtual environment**
+2. **Start development environment**
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   make dev
    ```
 
-3. **Install dependencies**
+3. **Access the application**
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:8000
+   - Admin: http://localhost:8000/admin
+
+### Production Deployment
+
+1. **Start production environment**
    ```bash
-   pip install -r requirements.txt
+   make prod
    ```
 
-4. **Run migrations**
-   ```bash
-   python manage.py makemigrations
-   python manage.py migrate
-   ```
+2. **Access the application**
+   - Main App: http://localhost
+   - Admin: http://localhost/admin
 
-5. **Create superuser (optional)**
-   ```bash
-   python manage.py createsuperuser
-   ```
+### Docker Commands
 
-6. **Start Django server**
-   ```bash
-   python manage.py runserver
-   ```
+```bash
+# Development
+make dev          # Start development environment
+make dev-build    # Build development containers
+make dev-logs     # View development logs
 
-The backend will be available at `http://localhost:8000`
+# Production
+make prod         # Start production environment
+make prod-build   # Build production containers
+make prod-logs    # View production logs
 
-### Frontend Setup
-
-1. **Navigate to frontend directory**
-   ```bash
-   cd frontend
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm start
-   ```
-
-The frontend will be available at `http://localhost:3000`
+# General
+make down         # Stop all containers
+make logs         # View all logs
+make clean        # Clean up containers and volumes
+make test         # Run tests
+make health       # Check service health
+```
 
 ## 📖 Usage Examples
 

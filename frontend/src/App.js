@@ -6,7 +6,7 @@ import CreatePoll from './components/CreatePoll';
 import PollDetail from './components/PollDetail';
 import ParticipatePoll from './components/ParticipatePoll';
 import PollResults from './components/PollResults';
-import './App.css';
+import './styles/index.css';
 
 function App() {
   return (
